@@ -8,13 +8,11 @@
 	<version>0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	
-	<name>Sonnenscheins ApfelMandel</name>
+	<name>ApfelMandel</name>
 	<description>
-		Sonnenscheins ApfelMandel ist eine naive Implementierung zur Berechnung und Visualisierung der
-		Mandelbrotmenge
+		naive implementation of mandel-set
 	</description>
 
-<!-- TODO: decide on license, acquire hosted SCM (github)
 	<licenses>
 		<license>
 			<distribution>repo</distribution>
@@ -23,18 +21,21 @@
 		</license>
 	</licenses>
 	<scm>
-		<url>https://github.com/dr1fter/cli-parsec</url>
-		<connection>scm:git:git://github.com/dr1fter/cli-parsec</connection>
+		<url>https://github.com/Authchirion/Apfelmandel</url>
+		<connection>scm:git:git://github.com/Authchirion/Apfelmandel</connection>
 	</scm>
-	<url>https://github.com/dr1fter/</url>
+	<url>https://github.com/Authchirion/</url>
 
 	<developers>
 		<developer>
 			<email>ccwienk (a t) dr1fter (d o t) de</email>
 			<name>Christian Cwienk</name>
 		</developer>
+		<developer>
+			<email>m (a t) rcel-weber (d o t) de</email>
+			<name>Marcel Weber</name>
+		</developer>
 	</developers>
--->
 
 	<dependencies>
 		<dependency>
@@ -107,37 +108,37 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4.1</version>
-				<configuration> <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments> 
-					</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-gpg-plugin</artifactId>
-				<version>1.4</version>
-				<executions>
-					<execution>
-						<id>sign-artifacts</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>sign</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 				<artifactId>maven-release-plugin</artifactId> -->
+<!-- 				<version>2.4.1</version> -->
+<!-- 				<configuration> <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>  -->
+<!-- 					</configuration> -->
+<!-- 			</plugin> -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 				<artifactId>maven-gpg-plugin</artifactId> -->
+<!-- 				<version>1.4</version> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<id>sign-artifacts</id> -->
+<!-- 						<phase>verify</phase> -->
+<!-- 						<goals> -->
+<!-- 							<goal>sign</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 			</plugin> -->
 		</plugins>
 	</build>
 
 	<distributionManagement>
 		<!--<repository> <id>sonatype-snapshot</id> <url>http://oss.sonatype.org/content/repositories/snapshots</url> 
 			</repository> -->
-		<repository>
-			<id>sonatype-release</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-		</repository>
+<!-- 		<repository> -->
+<!-- 			<id>sonatype-release</id> -->
+<!-- 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url> -->
+<!-- 		</repository> -->
 	<!-- to stage / release, log on to https://oss.sonatype.org/index.html#stagingRepositories -->
 	</distributionManagement>
 </project>

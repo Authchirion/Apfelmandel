@@ -1,15 +1,10 @@
 package de.sonnenschein.org;
 
-/**
- * A set of mandelbrot calculation parameters. Instances are immutable.
- * 
- * @author Christian Cwienk (dr1fter)
- */
 public class MandelCalcBaseParams
 {
 	public final static MandelCalcBaseParams DEFAULT_PARAMS = new MandelCalcBaseParams(-2.0f, 1.0f, -1.5f, 1.5f);
 	
-	private MandelCalcBaseParams(float rmin, float rmax, float imin, float imax)
+	MandelCalcBaseParams(float rmin, float rmax, float imin, float imax)
 	{
 		this.REAL_MAX = rmax;
 		this.REAL_MIN = rmin;
